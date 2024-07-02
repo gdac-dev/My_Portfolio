@@ -1,15 +1,12 @@
 {
   "name": "my-portfolio",
-  "homepage": "https://gdac-dev.github.io/my-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "lint": "next lint"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.4",
