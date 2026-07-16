@@ -1,19 +1,21 @@
 import React from "react";
 import TestimonialSlider from "./TestimonialSlider";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Testimonial = () => {
-    return (
-        <div className="bg-[#02050a] pt-[4rem] md:pt-[8rem] ">
-            <h1 className="heading">
-                Client <span className="text-yellow-400">Review</span>
-            </h1>
-            <div className="pt-[5rem] pb-[4rem] w-[80%] mx-auto">
+  const { t } = useLanguage();
 
-                {/*  Testimonial Slider */}
-                <TestimonialSlider />
-            </div>
-        </div>
-    )
-}
+  return (
+    <div id="testimonials" className="section-secondary pt-[6rem] md:pt-[8rem]">
+      <h2 className="heading">
+        {t("testimonials.heading")}{" "}
+        <span className="text-yellow-400">{t("testimonials.headingHighlight")}</span>
+      </h2>
+      <div className="pt-[3rem] pb-[4rem] w-[90%] lg:w-[80%] mx-auto">
+        <TestimonialSlider />
+      </div>
+    </div>
+  );
+};
 
 export default Testimonial;

@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "experience": "Expérience",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "testimonials": "Avis",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "SALUT, JE SUIS",
+    "name": "ARSENE !",
+    "subtitle": "Un développeur Full Stack organisé et fiable avec plus de 3 ans d'expérience, passionné par la création de solutions web, desktop et mobile de haute qualité.",
+    "downloadCv": "Télécharger CV",
+    "viewProjects": "Voir les Projets",
+    "roles": ["Développeur Fullstack", "Spécialiste Odoo", "Analyste de Données", "Ingénieur Logiciel"]
+  },
+  "about": {
+    "sectionLabel": "À PROPOS",
+    "heading": "Digitaliser les",
+    "headingHighlight": "Visions",
+    "bio": "Je suis Développeur Web Fullstack et Spécialiste ERP Odoo basé au Cameroun, avec plus de 3 ans d'expérience à transformer des besoins métier en solutions logicielles concrètes. Je conçois des sites web, plateformes e-commerce et applications web/desktop/mobile avec React, Next.js, Node.js et PostgreSQL, et je développe et intègre des modules Odoo personnalisés pour des entreprises du commerce, de la santé et de la logistique. Je développe aussi mes compétences en analyse de données avec Power BI et Excel. En parallèle, j'accompagne des développeurs juniors et j'aime relever des défis d'innovation. Je privilégie un code propre et maintenable et des solutions qui ont un réel impact pour leurs utilisateurs.",
+    "viewProfile": "Voir le Profil"
+  },
+  "services": {
+    "heading": "Mes",
+    "headingHighlight": "Services",
+    "items": [
+      {
+        "title": "Développeur Logiciel",
+        "description": "Sites web, plateformes e-commerce, applications web, desktop et mobile — conçues avec des frameworks modernes pour la performance et l'évolutivité."
+      },
+      {
+        "title": "Développeur Odoo",
+        "description": "Développement de modules personnalisés, intégration et configuration ERP adaptées à vos processus et flux de travail."
+      },
+      {
+        "title": "Analyste de Données",
+        "description": "Analyses et reporting avec des tableaux de bord Power BI et analyses avancées sous Microsoft Excel."
+      }
+    ]
+  },
+  "experience": {
+    "heading": "Expérience",
+    "headingHighlight": "Professionnelle",
+    "items": [
+      {
+        "dateRange": "2024 - Présent",
+        "title": "Développeur Web FullStack",
+        "company": "Striving for All",
+        "description": "Conception de 5+ sites web avec WordPress, GoDaddy Builder et Next.js. Développement d'une application de gestion de points de vente ayant amélioré les performances commerciales de 30%. Formation de plus de 10 collaborateurs."
+      },
+      {
+        "dateRange": "2023 - Présent",
+        "title": "Ingénieur Logiciel | Développeur Odoo",
+        "company": "Freelance",
+        "description": "Développement et configuration de modules Odoo personnalisés pour divers clients en freelance, incluant intégrations ERP et solutions de paiement local."
+      },
+      {
+        "dateRange": "2022 - 2024",
+        "title": "Développeur Web & Consultant IT",
+        "company": "JGME Consulting",
+        "description": "Développement d'applications e-commerce avec Python/Django et modules ERP avec Laravel pour boulangeries, supermarchés et hôpitaux. Analyse des besoins auprès de 6+ clients de secteurs variés."
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Compétences",
+    "headingHighlight": "Techniques"
+  },
+  "projects": {
+    "heading": "Pro",
+    "headingHighlight": "jets",
+    "viewProject": "Voir le Projet",
+    "privateProject": "Privé / Client",
+    "items": [
+      {
+        "title": "Application Web E-commerce pour la Commercialisation du Cacao",
+        "dateRange": "01/2026 - 06/2026",
+        "tech": ["Next.js", "TailwindCSS", "Prisma"],
+        "description": "Conception et développement d'une plateforme e-commerce facilitant la commercialisation des produits cacaoyers entre producteurs, coopératives et acheteurs.",
+        "link": "https://amd-nu.vercel.app"
+      },
+      {
+        "title": "Application de Facturation Automatique — Web & Desktop",
+        "dateRange": "05/2026 - 07/2026",
+        "tech": ["Next.js", "TailwindCSS", "Electron", "PostgreSQL"],
+        "description": "Solution de facturation multiplateforme permettant la génération automatique de devis/factures, la gestion des clients et le suivi des paiements.",
+        "link": "https://sos-digital-invoicing.vercel.app"
+      },
+      {
+        "title": "Module Odoo de Paiement Local — MoMo, OM, Virement Bancaire",
+        "dateRange": "10/2025 - Présent",
+        "tech": ["Python", "MyCoolpay API"],
+        "description": "Module de paiement natif pour Odoo intégrant MTN Mobile Money, Orange Money et virement bancaire, avec intégration MyCoolpay pour transactions sécurisées et suivi en temps réel.",
+        "link": null
+      },
+      {
+        "title": "Site Web de Transit et Logistique",
+        "dateRange": "01/2026 - 03/2026",
+        "tech": ["React.js", "Node.js", "MySQL", "Next.js", "TailwindCSS"],
+        "description": "Plateforme web de transit et logistique internationale : gestion des expéditions, présentation des services de transport (air, mer, route) et suivi des colis.",
+        "link": "https://transeurologistics.com"
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "Avis",
+    "headingHighlight": "Clients"
+  },
+  "contact": {
+    "heading": "Me",
+    "headingHighlight": "Contacter",
+    "subtitle": "Vous avez un projet en tête ou simplement envie de dire bonjour ? Envoyez-moi un message et je vous répondrai dans les plus brefs délais.",
+    "nameLabel": "Nom Complet",
+    "namePlaceholder": "Jean Dupont",
+    "emailLabel": "Adresse Email",
+    "emailPlaceholder": "jean@exemple.com",
+    "subjectLabel": "Sujet",
+    "subjectPlaceholder": "Demande de projet...",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Parlez-moi de votre projet...",
+    "send": "Envoyer le Message",
+    "sending": "Envoi en cours...",
+    "successTitle": "Message Envoyé !",
+    "successMessage": "Merci de m'avoir contacté. Je vous répondrai dans les plus brefs délais.",
+    "errorTitle": "Erreur",
+    "errorMessage": "Une erreur est survenue. Veuillez réessayer plus tard.",
+    "validationRequired": "Ce champ est requis",
+    "validationEmail": "Veuillez entrer une adresse email valide",
+    "validationMinLength": "Minimum {min} caractères requis",
+    "infoTitle": "Coordonnées",
+    "email": "arsenedemenou@gmail.com",
+    "phone": "+237 657 358 444",
+    "address": "Douala, Cameroun",
+    "emailLabel2": "Email",
+    "phoneLabel": "Téléphone",
+    "addressLabel": "Adresse"
+  },
+  "footer": {
+    "copyright": "© {year} GDACTECH. Tous droits réservés.",
+    "builtWith": "Construit avec Next.js & ❤️"
+  }
+}

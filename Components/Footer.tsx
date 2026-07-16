@@ -1,83 +1,76 @@
-import {
-  DevicePhoneMobileIcon,
-  EnvelopeIcon,
-  MapIcon,
-} from "@heroicons/react/20/solid";
 import React from "react";
-import BacToTopButton from "./BacToTopButton";
+import { useLanguage } from "@/context/LanguageContext";
+import { FaGithub, FaXTwitter, FaLinkedin } from "react-icons/fa6";
 
 const Footer = () => {
+  const { t } = useLanguage();
+  const year = new Date().getFullYear();
+
+  const socials = [
+    { icon: <FaGithub className="w-5 h-5" />, href: "https://github.com/gdac-dev", label: "GitHub" },
+    { icon: <FaXTwitter className="w-5 h-5" />, href: "https://x.com/guekoue", label: "Twitter/X" },
+    { icon: <FaLinkedin className="w-5 h-5" />, href: "https://www.linkedin.com/in/arsene-demenou/", label: "LinkedIn" },
+  ];
+
   return (
-    <div className="pt-[8rem] pb-[4rem] bg-[#02050a]">
-      <div
-        className="grid border-b-[1px] pb-[6rem] border-gray-400 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 w-[80%]
-      mx-auto gap-[3rem]"
-      >
-        <div className="flex items-center space-x-6">
-          <div
-            className="md:w-[6.5rem] md:h-[6.5rem] w-[5rem] h-[5rem] flex items-center justify-center
-            rounded-full bg-[#55e6a5]"
-          >
-            <MapIcon className="md:w-[4rem] md:h-[4rem] w-[3.5rem] h-[3.5rem] text-black" />
-          </div>
-          <div>
-            <h1 className="text-[25px] mb-[0.2rem] font-semibold text-[white]">
-              Address
-            </h1>
-            <p className="text-[16px] w-[90%] text-white opacity-60">
-              Pk 21, Douala
+    <footer
+      className="section-primary py-8 border-t"
+      style={{ borderColor: "var(--border-color)" }}
+    >
+      <div className="w-[90%] lg:w-[80%] mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* Brand */}
+          <div className="text-center md:text-left">
+            <h2
+              className="text-[22px] font-bold cursor-pointer"
+              style={{ color: "var(--text-primary)" }}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              GDAC<span className="text-yellow-400">TECH</span>
+            </h2>
+            <p className="text-[13px] mt-1" style={{ color: "var(--text-muted)" }}>
+              {String(t("footer.builtWith"))}
             </p>
           </div>
-        </div>
 
-        <div className="flex items-center space-x-6">
-          <div
-            className="md:w-[6.5rem] md:h-[6.5rem] w-[5rem] h-[5rem] flex items-center justify-center
-            rounded-full bg-[#55e6a5]"
-          >
-            <DevicePhoneMobileIcon className="md:w-[4rem] md:h-[4rem] w-[3.5rem] h-[3.5rem] text-black" />
+          {/* Social links */}
+          <div className="flex gap-3">
+            {socials.map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.label}
+                className="p-2.5 rounded-lg transition-all duration-300 hover:scale-110"
+                style={{
+                  background: "rgba(85, 230, 165, 0.08)",
+                  color: "var(--text-muted)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = "var(--accent-green)";
+                  e.currentTarget.style.background = "rgba(85, 230, 165, 0.15)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = "var(--text-muted)";
+                  e.currentTarget.style.background = "rgba(85, 230, 165, 0.08)";
+                }}
+              >
+                {social.icon}
+              </a>
+            ))}
           </div>
-          <div>
-            <h1 className="text-[25px] mb-[0.2rem] font-semibold text-[white]">
-              Phone
-            </h1>
-            <p className="text-[16px] w-[90%] text-white opacity-60">
-              +237653522435 <br />
-              +237657358444
-            </p>
-          </div>
-        </div>
 
-        <div className="flex items-center space-x-6">
-          <div
-            className="md:w-[6.5rem] md:h-[6.5rem] w-[5rem] h-[5rem] flex items-center justify-center
-            rounded-full bg-[#55e6a5]"
+          {/* Copyright */}
+          <p
+            className="text-[13px] text-center md:text-right"
+            style={{ color: "var(--text-muted)" }}
           >
-            <EnvelopeIcon className="md:w-[4rem] md:h-[4rem] w-[3.5rem] h-[3.5rem] text-black" />
-          </div>
-          <div>
-            <h1 className="text-[25px] mb-[0.2rem] font-semibold text-white">
-              Send Us Email
-            </h1>
-            <p className="text-[17px] w-[90%] text-white opacity-60">
-              arseneguekoue@gmail.com <br /> info@gdac-tech.com
-            </p>
-          </div>
+            {String(t("footer.copyright")).replace("{year}", String(year))}
+          </p>
         </div>
       </div>
-      <div className="w-[80%] mt-[2rem] mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-between">
-        <div className="text-[16px] mb-[2rem] md:mb-0 text-white opacity-20">
-          Copyyright @ Arsene 2024 | All Rights Reserved
-        </div>
-        <div className="flex items-center space-x-10">
-          <p className="text-[16px] text-white opacity-20">Terms & Condition</p>
-          <p className="text-[16px] text-white opacity-20">Privacy Policy</p>
-          <p className="text-[16px] text-white opacity-20">Sitemap</p>
-        </div>
-      </div>
-
-      <BacToTopButton />
-    </div>
+    </footer>
   );
 };
 

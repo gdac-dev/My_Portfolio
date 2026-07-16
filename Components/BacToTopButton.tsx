@@ -1,45 +1,38 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { HiChevronUp } from "react-icons/hi2";
 
 function BacToTopButton() {
-  const [backToTopButton, setBackToTopButton] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        setBackToTopButton(true);
-      } else {
-        setBackToTopButton(false);
-      }
-    });
+    const handleScroll = () => {
+      setVisible(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollUp = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <div className="Nav">
-      {backToTopButton && (
-        <button
-          style={{
-            position: "fixed",
-            bottom: "50px",
-            right: "50px",
-            height: "50px",
-            width: "50px",
-            fontSize: "50px",
-            color: "#55e6a5",
-          }}
-          onClick={scrollUp}
-        >
-          ^
-        </button>
-      )}
-    </div>
+    <button
+      onClick={scrollUp}
+      className={`fixed bottom-8 right-8 p-3 rounded-full z-[99999] transition-all duration-300 shadow-lg ${
+        visible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-4 pointer-events-none"
+      }`}
+      style={{
+        background: "var(--accent-green)",
+        color: "#000",
+        boxShadow: "0 4px 20px rgba(85, 230, 165, 0.4)",
+      }}
+      aria-label="Back to top"
+    >
+      <HiChevronUp className="w-6 h-6" />
+    </button>
   );
 }
 

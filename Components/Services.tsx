@@ -1,67 +1,70 @@
-import {
-  CodeBracketSquareIcon,
-  ComputerDesktopIcon,
-  RocketLaunchIcon,
-} from "@heroicons/react/20/solid";
 import React from "react";
+import { useLanguage } from "@/context/LanguageContext";
+import { HiCodeBracket, HiCog6Tooth, HiChartBar } from "react-icons/hi2";
+
+const serviceIcons = [
+  <HiCodeBracket key="code" className="w-12 h-12" />,
+  <HiCog6Tooth key="cog" className="w-12 h-12" />,
+  <HiChartBar key="chart" className="w-12 h-12" />,
+];
+
+const serviceGradients = [
+  "linear-gradient(135deg, rgba(85, 230, 165, 0.15), rgba(85, 230, 165, 0.05))",
+  "linear-gradient(135deg, rgba(250, 204, 21, 0.15), rgba(250, 204, 21, 0.05))",
+  "linear-gradient(135deg, rgba(96, 165, 250, 0.15), rgba(96, 165, 250, 0.05))",
+];
+
+const iconColors = ["var(--accent-green)", "var(--accent-yellow)", "#60a5fa"];
 
 const Services = () => {
+  const { t } = useLanguage();
+  const items = t("services.items") as Array<{ title: string; description: string }>;
+
   return (
-    <div className="bg-[#121212] pt-[4rem] md:pt-[8rem] pb-[5rem]">
-      <p className="heading">
-        My <span className="text-yellow-400">Services</span>
-      </p>
-      <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] mx-auto items-center gap-[3rem]
-            mt-[4rem] text-white"
-      >
-        <div data-aos="fade-right">
-          <div
-            className="bg-red-700 hover:scale-110 transform transition-all duration-300 hover:-rotate-6
-                    uppercase font-semibold text-center p-[2rem]"
-          >
-            <CodeBracketSquareIcon className="w-[6rem] h-[6rem] mx-auto text-[#d3fae8]" />
-            <h1 className="text-[20px] md:text-[30px] mt-[1.5rem] mb-[1.5rem]">
-              Frontend
-            </h1>
-            <p className="text-[15px] text-[#d3d2d2] font-normal">
-              Build responsive and dynamic web pages, with optimized page
-              loading times and adequate user-facing features.
-            </p>
-          </div>
-        </div>
+    <div id="services" className="section-tertiary pt-[6rem] md:pt-[8rem] pb-[5rem]">
+      <h2 className="heading">
+        {t("services.heading")}{" "}
+        <span className="text-yellow-400">{t("services.headingHighlight")}</span>
+      </h2>
 
-        <div data-aos="zoom-in" data-aos-delay="300">
-          <div
-            className="bg-orange-700 hover:scale-110 transform transition-all duration-300 uppercase 
-                    font-semibold text-center p-[2rem]"
-          >
-            <RocketLaunchIcon className="w-[6rem] h-[6rem] mx-auto text-[#d3fae8]" />
-            <h1 className="text-[20px] md:text-[30px] mt-[1.5rem] mb-[1.5rem]">
-              Backend
-            </h1>
-            <p className="text-[15px] text-[#d3d2d2] font-normal">
-              Build responsive and dynamic web pages, with optimized page
-              loading times and adequate user-facing features.
-            </p>
-          </div>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[90%] lg:w-[80%] mx-auto items-stretch gap-[2rem] mt-[4rem]">
+        {Array.isArray(items) &&
+          items.map((item, index) => (
+            <div
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 200}
+            >
+              <div
+                className="glass-card p-[2.5rem] h-full flex flex-col items-center text-center group cursor-default"
+                style={{ background: serviceGradients[index] }}
+              >
+                <div
+                  className="p-4 rounded-2xl mb-6 transition-all duration-300 group-hover:scale-110"
+                  style={{
+                    background: `${serviceGradients[index]}`,
+                    color: iconColors[index],
+                  }}
+                >
+                  {serviceIcons[index]}
+                </div>
 
-        <div data-aos="fade-left" data-aos-delay="500">
-          <div
-            className="bg-blue-700 hover:scale-110 transform transition-all duration-300 hover:rotate-6
-                    uppercase font-semibold text-center p-[2rem]"
-          >
-            <ComputerDesktopIcon className="w-[6rem] h-[6rem] mx-auto text-[#d3fae8]" />
-            <h1 className="text-[20px] md:text-[30px] mt-[1.5rem] mb-[1.5rem]">
-              Graphics Design
-            </h1>
-            <p className="text-[15px] text-[#d3d2d2] font-normal">
-              Build responsive and dynamic web pages, with optimized page
-              loading times and adequate user-facing features.
-            </p>
-          </div>
-        </div>
+                <h3
+                  className="text-[20px] md:text-[24px] font-bold mb-4 font-heading"
+                  style={{ color: "var(--text-primary)" }}
+                >
+                  {item.title}
+                </h3>
+
+                <p
+                  className="text-[15px] leading-relaxed"
+                  style={{ color: "var(--text-secondary)" }}
+                >
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
       </div>
     </div>
   );

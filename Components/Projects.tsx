@@ -1,108 +1,114 @@
-import Image from "next/image";
 import React from "react";
+import { useLanguage } from "@/context/LanguageContext";
+import { HiArrowTopRightOnSquare, HiLockClosed, HiCalendar } from "react-icons/hi2";
 
 const Projects = () => {
+  const { t, locale } = useLanguage();
+  const items = t("projects.items") as Array<{
+    title: string;
+    dateRange: string;
+    tech: string[];
+    description: string;
+    link: string | null;
+  }>;
+
   return (
-    <div className="bg-[#02050a] pt-[4rem] md:pt-[8rem] pb-[1rem]">
-      <h1 className="heading">
-        Pro<span className="text-yellow-400">Jects</span>
-      </h1>
-      <div className="w-[80%] pt-[2rem] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem] ">
-        <div data-aos="fade-up">
-          <div
-            className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative 
-                    w-[100%] h-[200px] md:h-[300px]"
-          >
-            <a href="https://www.lem-market.com/">
-              <Image
-                src="/images/p1.jpg"
-                alt="portfolio"
-                layout="fill"
-                className="object-contain"
-              />
-            </a>
-          </div>
-        </div>
+    <div id="projects" className="section-primary pt-[6rem] md:pt-[8rem] pb-[5rem]">
+      <h2 className="heading">
+        {t("projects.heading")}
+        <span className="text-yellow-400">{t("projects.headingHighlight")}</span>
+      </h2>
 
-        <div data-aos="fade-up" data-aos-delay="300">
-          <div
-            className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative 
-                    w-[100%] h-[200px] md:h-[300px]"
-          >
-            <a href="https://www.shineandtogether.org/">
-              <Image
-                src="/images/p2.jpg"
-                alt="portfolio"
-                layout="fill"
-                className="object-contain"
-              />
-            </a>
-          </div>
-        </div>
+      <div className="w-[90%] lg:w-[80%] mx-auto pt-[3rem] grid grid-cols-1 md:grid-cols-2 gap-[2rem]">
+        {Array.isArray(items) &&
+          items.map((item, index) => (
+            <div
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 150}
+            >
+              <div className="glass-card p-[2rem] h-full flex flex-col group">
+                {/* Date range */}
+                <div className="flex items-center gap-2 mb-3">
+                  <HiCalendar
+                    className="w-4 h-4 flex-shrink-0"
+                    style={{ color: "var(--accent-green)" }}
+                  />
+                  <span
+                    className="text-[13px] font-medium"
+                    style={{ color: "var(--text-muted)" }}
+                  >
+                    {item.dateRange}
+                  </span>
+                </div>
 
-        <div data-aos="fade-up" data-aos-delay="600">
-          <div
-            className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative 
-                    w-[100%] h-[200px] md:h-[300px]"
-          >
-            <a href="https://gdac-school.000webhostapp.com/">
-              <Image
-                src="/images/p3.jpg"
-                alt="portfolio"
-                layout="fill"
-                className="object-contain"
-              />
-            </a>
-          </div>
-        </div>
+                {/* Title */}
+                <h3
+                  className="text-[18px] md:text-[20px] font-bold font-heading mb-3 leading-snug"
+                  style={{ color: "var(--text-primary)" }}
+                >
+                  {item.title}
+                </h3>
 
-        <div data-aos="fade-up" data-aos-delay="900">
-          <div
-            className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative 
-                    w-[100%] h-[200px] md:h-[300px]"
-          >
-            <a href="https://gdac-school.000webhostapp.com/">
-              <Image
-                src="/images/p4.jpg"
-                alt="portfolio"
-                layout="fill"
-                className="object-contain"
-              />
-            </a>
-          </div>
-        </div>
+                {/* Tech stack pills */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {item.tech.map((tech, i) => (
+                    <span key={i} className="tech-pill">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
 
-        <div data-aos="fade-up" data-aos-delay="1200">
-          <div
-            className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative 
-                    w-[100%] h-[200px] md:h-[300px]"
-          >
-            <a href="https://gdac-school.000webhostapp.com/">
-              <Image
-                src="/images/p5.jpg"
-                alt="portfolio"
-                layout="fill"
-                className="object-contain"
-              />
-            </a>
-          </div>
-        </div>
+                {/* Description */}
+                <p
+                  className="text-[14px] md:text-[15px] leading-relaxed mb-6 flex-grow"
+                  style={{ color: "var(--text-secondary)" }}
+                >
+                  {item.description}
+                </p>
 
-        <div data-aos="fade-up" data-aos-delay="1600">
-          <div
-            className="transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative 
-                    w-[100%] h-[200px] md:h-[300px]"
-          >
-            <a href="https://gdac-school.000webhostapp.com/">
-              <Image
-                src="/images/p1.jpg"
-                alt="portfolio"
-                layout="fill"
-                className="object-contain"
-              />
-            </a>
-          </div>
-        </div>
+                {/* Link button */}
+                <div className="mt-auto">
+                  {item.link ? (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-[14px] font-semibold transition-all duration-300 hover:translate-x-1"
+                      style={{
+                        background: "rgba(85, 230, 165, 0.12)",
+                        color: "var(--accent-green)",
+                        border: "1px solid rgba(85, 230, 165, 0.2)",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = "var(--accent-green)";
+                        e.currentTarget.style.color = "#000";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = "rgba(85, 230, 165, 0.12)";
+                        e.currentTarget.style.color = "var(--accent-green)";
+                      }}
+                    >
+                      <span>{t("projects.viewProject")}</span>
+                      <HiArrowTopRightOnSquare className="w-4 h-4" />
+                    </a>
+                  ) : (
+                    <span
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-[14px] font-semibold"
+                      style={{
+                        background: "rgba(250, 204, 21, 0.1)",
+                        color: "var(--accent-yellow)",
+                        border: "1px solid rgba(250, 204, 21, 0.2)",
+                      }}
+                    >
+                      <HiLockClosed className="w-4 h-4" />
+                      <span>{t("projects.privateProject")}</span>
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
       </div>
     </div>
   );

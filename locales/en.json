@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "testimonials": "Reviews",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "HI, I'M",
+    "name": "ARSENE!",
+    "subtitle": "An organised and dependable Full Stack developer with 3+ years of experience, passionate about building high-quality web, desktop & mobile solutions.",
+    "downloadCv": "Download CV",
+    "viewProjects": "View Projects",
+    "roles": ["Fullstack Developer", "Odoo Specialist", "Data Analyst", "Software Engineer"]
+  },
+  "about": {
+    "sectionLabel": "ABOUT ME",
+    "heading": "Digitalizing",
+    "headingHighlight": "Visions",
+    "bio": "I'm a Fullstack Web Developer and Odoo ERP Specialist based in Cameroon, with over 3 years of experience turning business needs into working software. I build websites, e-commerce platforms, and web/desktop/mobile applications using React, Next.js, Node.js, and PostgreSQL, and I design and integrate custom Odoo modules for businesses across retail, healthcare, and logistics. I'm also growing my data analytics skills with Power BI and Excel. Beyond client work, I mentor junior developers and enjoy taking on innovation challenges. I care about clean, maintainable code and solutions that actually move the needle for the people using them.",
+    "viewProfile": "View Profile"
+  },
+  "services": {
+    "heading": "My",
+    "headingHighlight": "Services",
+    "items": [
+      {
+        "title": "Software Developer",
+        "description": "Websites, e-commerce platforms, web applications, desktop and mobile apps — built with modern frameworks for performance and scalability."
+      },
+      {
+        "title": "Odoo Developer",
+        "description": "Custom module development, ERP integration and configuration tailored to your business processes and workflows."
+      },
+      {
+        "title": "Data Analyst",
+        "description": "Business insights and reporting with Power BI dashboards and advanced Microsoft Excel analytics."
+      }
+    ]
+  },
+  "experience": {
+    "heading": "Professional",
+    "headingHighlight": "Experience",
+    "items": [
+      {
+        "dateRange": "2024 - Present",
+        "title": "FullStack Web Developer",
+        "company": "Striving for All",
+        "description": "Designed 5+ websites with WordPress, GoDaddy Builder and Next.js. Developed a point-of-sale management application that improved business performance by 30%. Trained 10+ team members on digital tools."
+      },
+      {
+        "dateRange": "2023 - Present",
+        "title": "Software Engineer | Odoo Developer",
+        "company": "Freelance",
+        "description": "Developing and configuring custom Odoo modules for diverse freelance clients, including ERP integrations and local payment solutions."
+      },
+      {
+        "dateRange": "2022 - 2024",
+        "title": "Web Developer & IT Consultant",
+        "company": "JGME Consulting",
+        "description": "Built e-commerce applications with Python/Django and ERP modules with Laravel for bakeries, supermarkets and hospitals. Analyzed requirements for 6+ clients across various sectors."
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Technical",
+    "headingHighlight": "Skills"
+  },
+  "projects": {
+    "heading": "Pro",
+    "headingHighlight": "jects",
+    "viewProject": "View Project",
+    "privateProject": "Private / Client",
+    "items": [
+      {
+        "title": "E-commerce Platform for Cocoa Trade",
+        "dateRange": "01/2026 - 06/2026",
+        "tech": ["Next.js", "TailwindCSS", "Prisma"],
+        "description": "Design and development of an e-commerce platform facilitating cocoa product trade between producers, cooperatives and buyers.",
+        "link": "https://amd-nu.vercel.app"
+      },
+      {
+        "title": "Auto-Invoicing App — Web & Desktop",
+        "dateRange": "05/2026 - 07/2026",
+        "tech": ["Next.js", "TailwindCSS", "Electron", "PostgreSQL"],
+        "description": "Cross-platform invoicing solution enabling automatic quote/invoice generation, client management and payment tracking.",
+        "link": "https://sos-digital-invoicing.vercel.app"
+      },
+      {
+        "title": "Odoo Local Payment Module — MoMo, OM, Bank Transfer",
+        "dateRange": "10/2025 - Present",
+        "tech": ["Python", "MyCoolpay API"],
+        "description": "Native Odoo payment module integrating MTN Mobile Money, Orange Money and bank transfer, with MyCoolpay integration for secure real-time transactions.",
+        "link": null
+      },
+      {
+        "title": "Transit & Logistics Website",
+        "dateRange": "01/2026 - 03/2026",
+        "tech": ["React.js", "Node.js", "MySQL", "Next.js", "TailwindCSS"],
+        "description": "International transit and logistics web platform: shipment management, transport service showcase (air, sea, road) and parcel tracking.",
+        "link": "https://transeurologistics.com"
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "Client",
+    "headingHighlight": "Reviews"
+  },
+  "contact": {
+    "heading": "Get In",
+    "headingHighlight": "Touch",
+    "subtitle": "Have a project in mind or just want to say hello? Drop me a message and I'll get back to you as soon as possible.",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "John Doe",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "john@example.com",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "Project inquiry...",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell me about your project...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "successTitle": "Message Sent!",
+    "successMessage": "Thank you for reaching out. I'll get back to you as soon as possible.",
+    "errorTitle": "Error",
+    "errorMessage": "Something went wrong. Please try again later.",
+    "validationRequired": "This field is required",
+    "validationEmail": "Please enter a valid email address",
+    "validationMinLength": "Minimum {min} characters required",
+    "infoTitle": "Contact Information",
+    "email": "arsenedemenou@gmail.com",
+    "phone": "+237 657 358 444",
+    "address": "Douala, Cameroun",
+    "emailLabel2": "Email",
+    "phoneLabel": "Phone",
+    "addressLabel": "Address"
+  },
+  "footer": {
+    "copyright": "© {year} GDACTECH. All rights reserved.",
+    "builtWith": "Built with Next.js & ❤️"
+  }
+}
