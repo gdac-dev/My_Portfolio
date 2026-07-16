@@ -142,5 +142,8 @@
   "footer": {
     "copyright": "© {year} GDACTECH. All rights reserved.",
     "builtWith": "Built with Next.js & ❤️"
+  },
+  "whatsapp": {
+    "message": "Hi Arsene, I saw your portfolio and I'd like to talk about a project / opportunity. Do you have a few minutes to chat?"
   }
 }

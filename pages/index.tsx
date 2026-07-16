@@ -10,6 +10,7 @@ import Skills from "@/Components/Skills";
 import TechnicalSkills from "@/Components/TechnicalSkills";
 import Testimonial from "@/Components/Testimonial";
 import BacToTopButton from "@/Components/BacToTopButton";
+import WhatsAppButton from "@/Components/WhatsAppButton";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -82,6 +83,9 @@ const HomePage = () => {
 
         {/* Back to top */}
         <BacToTopButton />
+
+        {/* WhatsApp Quick Contact */}
+        <WhatsAppButton />
       </div>
     </>
   );

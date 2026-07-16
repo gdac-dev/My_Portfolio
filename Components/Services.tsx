@@ -1,6 +1,7 @@
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { HiCodeBracket, HiCog6Tooth, HiChartBar } from "react-icons/hi2";
+import ParallaxItem from "./ParallaxItem";
 
 const serviceIcons = [
   <HiCodeBracket key="code" className="w-12 h-12" />,
@@ -39,15 +40,17 @@ const Services = () => {
                 className="glass-card p-[2.5rem] h-full flex flex-col items-center text-center group cursor-default"
                 style={{ background: serviceGradients[index] }}
               >
-                <div
-                  className="p-4 rounded-2xl mb-6 transition-all duration-300 group-hover:scale-110"
-                  style={{
-                    background: `${serviceGradients[index]}`,
-                    color: iconColors[index],
-                  }}
-                >
-                  {serviceIcons[index]}
-                </div>
+                <ParallaxItem speed={10} reverse={index % 2 === 0}>
+                  <div
+                    className="p-4 rounded-2xl mb-6 transition-all duration-300 group-hover:scale-110"
+                    style={{
+                      background: `${serviceGradients[index]}`,
+                      color: iconColors[index],
+                    }}
+                  >
+                    {serviceIcons[index]}
+                  </div>
+                </ParallaxItem>
 
                 <h3
                   className="text-[20px] md:text-[24px] font-bold mb-4 font-heading"

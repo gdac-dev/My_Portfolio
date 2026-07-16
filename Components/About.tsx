@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { FaGithub, FaXTwitter, FaLinkedin } from "react-icons/fa6";
+import ParallaxItem from "./ParallaxItem";
 
 const About = () => {
   const { t } = useLanguage();
@@ -124,12 +125,12 @@ const About = () => {
           </div>
         </div>
 
-        {/* Image */}
+        {/* Image with parallax layers */}
         <div
           data-aos="fade-left"
-          className="lg:w-[450px] mx-auto md:mx-0 mt-[2rem] lg:mt-0 lg:h-[500px] w-[300px] h-[350px] relative"
+          className="w-full max-w-[320px] sm:max-w-[450px] mx-auto md:mx-0 mt-[2rem] lg:mt-0 aspect-[4/5] lg:h-[500px] relative"
         >
-          <div className="relative z-[11] w-[100%] h-[100%] rounded-2xl overflow-hidden shadow-2xl">
+          <ParallaxItem speed={8} className="relative z-[11] w-[100%] h-[100%] rounded-2xl overflow-hidden shadow-2xl">
             <Image
               src="/images/Me_pro.PNG"
               alt="Arsene Demenou"
@@ -137,11 +138,13 @@ const About = () => {
               style={{ objectFit: "cover" }}
               className="w-[100%] h-[100%]"
             />
-          </div>
-          <div
-            className="absolute w-[100%] h-[100%] z-[10] rounded-2xl top-[-1.5rem] right-[-1.5rem]"
-            style={{ background: "var(--accent-green)", opacity: 0.3 }}
-          />
+          </ParallaxItem>
+          <ParallaxItem speed={-8} reverse={true} className="absolute w-[100%] h-[100%] z-[10] rounded-2xl top-[-1.5rem] right-[-1.5rem]">
+            <div
+              className="w-full h-full rounded-2xl"
+              style={{ background: "var(--accent-green)", opacity: 0.3 }}
+            />
+          </ParallaxItem>
         </div>
       </div>
     </div>

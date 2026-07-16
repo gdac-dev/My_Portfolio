@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ArrowDownTrayIcon } from "@heroicons/react/20/solid";
 import { HiOutlineArrowDown } from "react-icons/hi";
 import { useLanguage } from "@/context/LanguageContext";
+import ParallaxItem from "./ParallaxItem";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -64,21 +65,23 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Profile image */}
-        <div className="w-[280px] h-[280px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] hidden lg:flex mx-auto relative">
-          <div
-            className="absolute inset-0 rounded-full animate-pulse-glow"
-            style={{ background: "var(--accent-green)", opacity: 0.15 }}
-          />
-          <div className="relative w-full h-full rounded-full overflow-hidden border-4" style={{ borderColor: "var(--accent-green)" }}>
-            <Image
-              src="/images/Me_pro.PNG"
-              alt="Arsene Demenou — Fullstack Developer"
-              fill
-              className="object-cover"
-              priority
+        {/* Profile image with parallax */}
+        <div className="hidden lg:flex justify-center items-center">
+          <ParallaxItem speed={15} className="w-[450px] h-[450px] relative">
+            <div
+              className="absolute inset-0 rounded-full animate-pulse-glow"
+              style={{ background: "var(--accent-green)", opacity: 0.15 }}
             />
-          </div>
+            <div className="relative w-full h-full rounded-full overflow-hidden border-4" style={{ borderColor: "var(--accent-green)" }}>
+              <Image
+                src="/images/Me_pro.PNG"
+                alt="Arsene Demenou — Fullstack Developer"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </ParallaxItem>
         </div>
       </div>
     </div>

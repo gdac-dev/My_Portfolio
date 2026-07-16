@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { skills, skillCategories } from "@/data/skills";
+import ParallaxItem from "./ParallaxItem";
 import {
   HiCodeBracket,
   HiServerStack,
@@ -66,15 +67,17 @@ const TechnicalSkills = () => {
             <div key={category} data-aos="fade-up">
               {/* Category header */}
               <div className="flex items-center gap-3 mb-4">
-                <span
-                  className="p-2 rounded-lg"
-                  style={{
-                    background: "rgba(85, 230, 165, 0.12)",
-                    color: "var(--accent-green)",
-                  }}
-                >
-                  {categoryIcons[category]}
-                </span>
+                <ParallaxItem speed={6} className="inline-block">
+                  <span
+                    className="p-2 rounded-lg flex items-center justify-center"
+                    style={{
+                      background: "rgba(85, 230, 165, 0.12)",
+                      color: "var(--accent-green)",
+                    }}
+                  >
+                    {categoryIcons[category]}
+                  </span>
+                </ParallaxItem>
                 <h3
                   className="text-[18px] font-bold font-heading uppercase tracking-wider"
                   style={{ color: "var(--text-primary)" }}
