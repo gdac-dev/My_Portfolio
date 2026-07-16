@@ -11,43 +11,43 @@ export interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
+    name: 'Elvis Kamgang',
+    role: 'CEO - Kelvis Boulangerie',
+    quote: {
+      en: 'Working with Arsene on our Odoo integration and customization was an excellent experience. He carefully understood our business needs and delivered a reliable, user-friendly solution tailored to our operations. His professionalism, attention to detail, and responsiveness made the entire process smooth and efficient. I highly recommend his Odoo services!',
+      fr: "Travailler avec Arsene pour l’intégration et la personnalisation de notre solution Odoo a été une excellente expérience. Il a parfaitement compris les besoins de notre entreprise et a livré une solution fiable, intuitive et adaptée à nos opérations. Son professionnalisme, son souci du détail et sa réactivité ont rendu tout le processus fluide et efficace. Je recommande vivement ses services Odoo !",
+    },
+    avatar: '/images/kelvis.png',
+    rating: 5,
+  },
+  {
     name: 'Simon Nitba',
-    role: 'CEO - Lem-market',
+    role: 'CEO - Lem-Market',
     quote: {
-      en: 'Working with Arsene was an excellent experience. He delivered a high-quality e-commerce platform on time and at a fair price. His attention to detail and communication were outstanding. Highly recommended!',
-      fr: "Travailler avec Arsene a été une excellente expérience. Il a livré une plateforme e-commerce de haute qualité dans les délais et à un prix juste. Son attention aux détails et sa communication étaient remarquables. Je le recommande vivement !",
+      en: 'Arsene developed and customized our e-commerce platform using Odoo 17, integrating secure payment methods and adapting the website modules to meet our business needs. He also streamlined our sales and inventory management processes, making our operations more efficient and easier to manage. He is reliable, skilled, and committed to delivering high-quality solutions. We are very satisfied with his services.',
+      fr: "Arsene a développé et personnalisé notre plateforme e-commerce avec Odoo 17, en intégrant des moyens de paiement sécurisés et en adaptant les modules du site web aux besoins de notre entreprise. Il a également optimisé la gestion de nos ventes et de nos stocks, rendant nos opérations plus efficaces et plus simples à gérer. Il est fiable, compétent et engagé à fournir des solutions de qualité. Nous sommes très satisfaits de ses services.",
     },
-    avatar: '/images/c1.jpg',
+    avatar: '/images/Lem Logo.png',
     rating: 5,
   },
   {
-    name: 'Christian Ngo',
-    role: 'CEO - SFA',
+    name: 'Joseph Ngoum',
+    role: 'Freelancer',
     quote: {
-      en: 'Arsene built our organization website and helped us establish a strong digital presence. He is reliable, creative, and always goes above and beyond. A true professional who cares about delivering real impact.',
-      fr: "Arsene a construit le site web de notre organisation et nous a aidés à établir une forte présence numérique. Il est fiable, créatif et va toujours au-delà des attentes. Un vrai professionnel soucieux de créer un réel impact.",
+      en: 'Arsene developed a reliable automated billing application that works seamlessly on both web and desktop. It has simplified my invoicing process, reduced manual errors, and saved me valuable time. The application is fast, user-friendly, and perfectly tailored to my needs. Excellent work and highly professional service.',
+      fr: "Arsene a développé une application de facturation automatique fiable, accessible sur le Web et sur ordinateur. Elle a simplifié mon processus de facturation, réduit les erreurs manuelles et m'a permis de gagner un temps précieux. L'application est rapide, facile à utiliser et parfaitement adaptée à mes besoins. Un excellent travail et un service très professionnel.",
     },
-    avatar: '/images/c2.jpg',
+    avatar: '/images/Director.png',
     rating: 5,
   },
   {
-    name: 'Zingui John',
-    role: 'Mechanical Engineer',
+    name: 'Simone Tsakeng',
+    role: 'CEO - Manjo Children Home (NGO)',
     quote: {
-      en: 'I needed a modern portfolio site and Arsene delivered beyond my expectations. Clean design, fast loading, and responsive on all devices. Great service and very professional approach.',
-      fr: "J'avais besoin d'un site portfolio moderne et Arsene a livré au-delà de mes attentes. Design épuré, chargement rapide et responsive sur tous les appareils. Excellent service et approche très professionnelle.",
+      en: 'Arsene did an excellent job developing our organization’s responsive website. He also improved our SEO, optimized the website’s performance, and successfully integrated Google Analytics to help us better understand our audience. He is professional, reliable, and attentive to details. I am very satisfied with the results and highly recommend his services.',
+      fr: "Arsene a réalisé un excellent travail dans le développement du site web responsive de notre organisation. Il a également amélioré notre référencement naturel, optimisé les performances du site et intégré Google Analytics afin de nous aider à mieux comprendre notre audience. Il est professionnel, fiable et attentif aux détails. Je suis très satisfaite des résultats et je recommande vivement ses services.",
     },
-    avatar: '/images/c1.jpg',
-    rating: 5,
-  },
-  {
-    name: 'Ndoumbe Jaures',
-    role: 'Mobile Developer',
-    quote: {
-      en: 'Arsene is a talented developer and a great collaborator. His expertise in both frontend and backend technologies makes him a versatile partner for any project. I highly recommend his services.',
-      fr: "Arsene est un développeur talentueux et un excellent collaborateur. Son expertise en technologies frontend et backend fait de lui un partenaire polyvalent pour tout projet. Je recommande vivement ses services.",
-    },
-    avatar: '/images/c2.jpg',
+    avatar: '/images/CEO.png',
     rating: 5,
   },
 ];

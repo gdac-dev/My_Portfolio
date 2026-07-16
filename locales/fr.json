@@ -15,7 +15,12 @@
     "subtitle": "Un développeur Full Stack organisé et fiable avec plus de 3 ans d'expérience, passionné par la création de solutions web, desktop et mobile de haute qualité.",
     "downloadCv": "Télécharger CV",
     "viewProjects": "Voir les Projets",
-    "roles": ["Développeur Fullstack", "Spécialiste Odoo", "Analyste de Données", "Ingénieur Logiciel"]
+    "roles": [
+      "Développeur Fullstack",
+      "Spécialiste Odoo",
+      "Analyste de Données",
+      "Ingénieur Logiciel"
+    ]
   },
   "about": {
     "sectionLabel": "À PROPOS",
@@ -79,28 +84,46 @@
       {
         "title": "Application Web E-commerce pour la Commercialisation du Cacao",
         "dateRange": "01/2026 - 06/2026",
-        "tech": ["Next.js", "TailwindCSS", "Prisma"],
+        "tech": [
+          "Next.js",
+          "TailwindCSS",
+          "Prisma"
+        ],
         "description": "Conception et développement d'une plateforme e-commerce facilitant la commercialisation des produits cacaoyers entre producteurs, coopératives et acheteurs.",
         "link": "https://amd-nu.vercel.app"
       },
       {
         "title": "Application de Facturation Automatique — Web & Desktop",
         "dateRange": "05/2026 - 07/2026",
-        "tech": ["Next.js", "TailwindCSS", "Electron", "PostgreSQL"],
-        "description": "Solution de facturation multiplateforme permettant la génération automatique de devis/factures, la gestion des clients et le suivi des paiements.",
-        "link": "https://sos-digital-invoicing.vercel.app"
+        "tech": [
+          "Next.js",
+          "TailwindCSS",
+          "Electron",
+          "PostgreSQL"
+        ],
+        "description": "Solution de facturation multi-plateforme permettant la génération automatique de devis/factures, la gestion des clients et le suivi des paiements.",
+        "link": "https://www.sosdigital.shop"
       },
       {
         "title": "Module Odoo de Paiement Local — MoMo, OM, Virement Bancaire",
-        "dateRange": "10/2025 - Présent",
-        "tech": ["Python", "MyCoolpay API"],
+        "dateRange": "10/2025 - 02/2026",
+        "tech": [
+          "Python",
+          "MyCoolpay API"
+        ],
         "description": "Module de paiement natif pour Odoo intégrant MTN Mobile Money, Orange Money et virement bancaire, avec intégration MyCoolpay pour transactions sécurisées et suivi en temps réel.",
         "link": null
       },
       {
         "title": "Site Web de Transit et Logistique",
         "dateRange": "01/2026 - 03/2026",
-        "tech": ["React.js", "Node.js", "MySQL", "Next.js", "TailwindCSS"],
+        "tech": [
+          "React.js",
+          "Node.js",
+          "MySQL",
+          "Next.js",
+          "TailwindCSS"
+        ],
         "description": "Plateforme web de transit et logistique internationale : gestion des expéditions, présentation des services de transport (air, mer, route) et suivi des colis.",
         "link": "https://transeurologistics.com"
       }

@@ -132,8 +132,8 @@ const About = () => {
         >
           <ParallaxItem speed={8} className="relative z-[11] w-[100%] h-[100%] rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="/images/Me_pro.PNG"
-              alt="Arsene Demenou"
+              src="/images/Me_Work.png"
+              alt="Arsene In Office"
               fill
               style={{ objectFit: "cover" }}
               className="w-[100%] h-[100%]"

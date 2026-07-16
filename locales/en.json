@@ -15,7 +15,12 @@
     "subtitle": "An organised and dependable Full Stack developer with 3+ years of experience, passionate about building high-quality web, desktop & mobile solutions.",
     "downloadCv": "Download CV",
     "viewProjects": "View Projects",
-    "roles": ["Fullstack Developer", "Odoo Specialist", "Data Analyst", "Software Engineer"]
+    "roles": [
+      "Fullstack Developer",
+      "Odoo Specialist",
+      "Data Analyst",
+      "Software Engineer"
+    ]
   },
   "about": {
     "sectionLabel": "ABOUT ME",
@@ -79,28 +84,46 @@
       {
         "title": "E-commerce Platform for Cocoa Trade",
         "dateRange": "01/2026 - 06/2026",
-        "tech": ["Next.js", "TailwindCSS", "Prisma"],
+        "tech": [
+          "Next.js",
+          "TailwindCSS",
+          "Prisma"
+        ],
         "description": "Design and development of an e-commerce platform facilitating cocoa product trade between producers, cooperatives and buyers.",
         "link": "https://amd-nu.vercel.app"
       },
       {
         "title": "Auto-Invoicing App — Web & Desktop",
         "dateRange": "05/2026 - 07/2026",
-        "tech": ["Next.js", "TailwindCSS", "Electron", "PostgreSQL"],
+        "tech": [
+          "Next.js",
+          "TailwindCSS",
+          "Electron",
+          "PostgreSQL"
+        ],
         "description": "Cross-platform invoicing solution enabling automatic quote/invoice generation, client management and payment tracking.",
-        "link": "https://sos-digital-invoicing.vercel.app"
+        "link": "https://www.sosdigital.shop"
       },
       {
         "title": "Odoo Local Payment Module — MoMo, OM, Bank Transfer",
-        "dateRange": "10/2025 - Present",
-        "tech": ["Python", "MyCoolpay API"],
+        "dateRange": "10/2025 - 02/2026",
+        "tech": [
+          "Python",
+          "MyCoolpay API"
+        ],
         "description": "Native Odoo payment module integrating MTN Mobile Money, Orange Money and bank transfer, with MyCoolpay integration for secure real-time transactions.",
         "link": null
       },
       {
         "title": "Transit & Logistics Website",
         "dateRange": "01/2026 - 03/2026",
-        "tech": ["React.js", "Node.js", "MySQL", "Next.js", "TailwindCSS"],
+        "tech": [
+          "React.js",
+          "Node.js",
+          "MySQL",
+          "Next.js",
+          "TailwindCSS"
+        ],
         "description": "International transit and logistics web platform: shipment management, transport service showcase (air, sea, road) and parcel tracking.",
         "link": "https://transeurologistics.com"
       }

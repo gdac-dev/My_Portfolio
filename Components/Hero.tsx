@@ -74,7 +74,7 @@ const Hero = () => {
             />
             <div className="relative w-full h-full rounded-full overflow-hidden border-4" style={{ borderColor: "var(--accent-green)" }}>
               <Image
-                src="/images/Me_pro.PNG"
+                src="/images/Arsene.jpg"
                 alt="Arsene Demenou — Fullstack Developer"
                 fill
                 className="object-cover"
