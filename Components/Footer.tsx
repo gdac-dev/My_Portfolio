@@ -29,8 +29,8 @@ const Footer = () => {
               <Image
                 src="/images/logo.png"
                 alt="GDAC Tech Logo"
-                width={110}
-                height={33}
+                width={140}
+                height={42}
                 className="object-contain dark:invert-0 invert transition-all duration-300"
               />
             </div>

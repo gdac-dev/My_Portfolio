@@ -23,13 +23,6 @@ const ClickEffect = () => {
     if (!isDesktop) return;
 
     const handleClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      // Capture clicks on buttons, anchors, and elements with pointer cursor styling
-      const isInteractive = target.closest(
-        "button, a, [role='button'], .cursor-pointer, input[type='submit'], input[type='button']"
-      );
-      if (!isInteractive) return;
-
       const newEffect: Whirlwind = {
         id: Date.now() + Math.random(),
         x: e.clientX,
@@ -40,7 +33,7 @@ const ClickEffect = () => {
 
       setTimeout(() => {
         setEffects((prev) => prev.filter((eff) => eff.id !== newEffect.id));
-      }, 700);
+      }, 800);
     };
 
     window.addEventListener("mousedown", handleClick);
@@ -62,18 +55,18 @@ const ClickEffect = () => {
             top: eff.y,
           }}
         >
-          <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-            {/* Whirlwind Spiral 1 */}
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+            {/* Outer main gold spiral vortex */}
             <path
-              d="M30,30 C35,20 45,28 30,38 C18,46 22,24 30,30 Z"
+              d="M50,50 C53,47 57,48 57,53 C57,60 49,63 43,59 C35,53 38,40 48,34 C61,26 73,39 67,54 C58,72 32,77 22,61 C9,41 24,9 50,7"
               stroke="#facc15"
               strokeWidth="2.5"
               strokeLinecap="round"
               className="spiral-path"
             />
-            {/* Whirlwind Spiral 2 */}
+            {/* Inner secondary dark-gold spiral vortex */}
             <path
-              d="M30,30 C20,38 12,28 30,18 C46,8 38,34 30,30 Z"
+              d="M50,50 C47,53 43,52 43,47 C43,40 51,37 57,41 C65,47 62,60 52,66 C39,74 27,61 33,46 C42,28 68,23 78,39 C91,59 76,91 50,93"
               stroke="#eab308"
               strokeWidth="1.5"
               strokeLinecap="round"
@@ -95,19 +88,19 @@ const ClickEffect = () => {
         .whirlwind-effect {
           position: absolute;
           transform: translate(-50%, -50%);
-          width: 60px;
-          height: 60px;
-          animation: whirlwind-spin-fade 0.7s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+          width: 100px;
+          height: 100px;
+          animation: whirlwind-spin-fade 0.8s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
         }
         .spiral-path {
-          stroke-dasharray: 100;
-          stroke-dashoffset: 100;
-          animation: spiral-draw 0.7s ease-out forwards;
+          stroke-dasharray: 200;
+          stroke-dashoffset: 200;
+          animation: spiral-draw 0.8s ease-out forwards;
         }
         .spiral-path-delayed {
-          stroke-dasharray: 100;
-          stroke-dashoffset: 100;
-          animation: spiral-draw 0.7s ease-out 0.08s forwards;
+          stroke-dasharray: 200;
+          stroke-dashoffset: 200;
+          animation: spiral-draw 0.8s ease-out 0.08s forwards;
         }
         @keyframes whirlwind-spin-fade {
           0% {
@@ -115,7 +108,7 @@ const ClickEffect = () => {
             opacity: 1;
           }
           100% {
-            transform: translate(-50%, -50%) scale(1.5) rotate(540deg);
+            transform: translate(-50%, -50%) scale(2.0) rotate(720deg);
             opacity: 0;
           }
         }

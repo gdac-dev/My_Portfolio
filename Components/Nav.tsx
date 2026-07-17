@@ -37,8 +37,8 @@ const Nav = ({ openNav }: Props) => {
           <Image
             src="/images/logo.png"
             alt="GDAC Tech Logo"
-            width={120}
-            height={36}
+            width={150}
+            height={45}
             className="object-contain dark:invert-0 invert transition-all duration-300"
           />
         </div>

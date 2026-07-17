@@ -12,7 +12,9 @@ export default function Document() {
         <meta property="og:url" content="https://gdac.vercel.app" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@guekoue" />
-        <link rel="icon" href="/images/Icons/fav_GDAC.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/Icons/fav_GDAC.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/Icons/fav_GDAC.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/Icons/fav_GDAC.png" />
       </Head>
       <body className="font-primary">
         <Main />
