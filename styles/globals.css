@@ -54,7 +54,14 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4.5,3 L17.5,11.5 L11,12.5 L14.5,19 L11.5,20.5 L8,14 L4.5,15.5 Z' fill='%2309101a' stroke='%23ffffff' stroke-width='1.5'/%3E%3Ccircle cx='4.5' cy='3' r='2.5' fill='%23facc15'/%3E%3C/svg%3E") 4 3, auto;
 }
+
+/* Custom themed pointer cursor on hover */
+a, button, [role="button"], .cursor-pointer, input, textarea, select {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4.5,3 L17.5,11.5 L11,12.5 L14.5,19 L11.5,20.5 L8,14 L4.5,15.5 Z' fill='%2355e6a5' stroke='%23ffffff' stroke-width='1.5'/%3E%3Ccircle cx='4.5' cy='3' r='2.5' fill='%23facc15'/%3E%3C/svg%3E") 4 3, pointer;
+}
+
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {

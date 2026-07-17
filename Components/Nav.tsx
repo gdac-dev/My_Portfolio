@@ -3,6 +3,7 @@ import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useTheme } from "@/context/ThemeContext";
 import { FiSun, FiMoon } from "react-icons/fi";
+import Image from "next/image";
 
 interface Props {
   openNav: () => void;
@@ -29,14 +30,18 @@ const Nav = ({ openNav }: Props) => {
     >
       <div className="flex items-center justify-between w-[90%] lg:w-[80%] mx-auto h-[100%]">
         {/* Logo */}
-        <h1
-          className="flex-[0.6] cursor-pointer text-[25px] font-bold"
-          style={{ color: "var(--text-primary)" }}
+        <div
+          className="flex-[0.6] cursor-pointer flex items-center"
           onClick={() => scrollTo("hero")}
         >
-          GDAC
-          <span className="text-yellow-400">TECH</span>
-        </h1>
+          <Image
+            src="/images/logo.png"
+            alt="GDAC Tech Logo"
+            width={120}
+            height={36}
+            className="object-contain dark:invert-0 invert transition-all duration-300"
+          />
+        </div>
 
         {/* Desktop Nav Links */}
         <div className="hidden md:flex items-center gap-6">

@@ -11,6 +11,7 @@ import TechnicalSkills from "@/Components/TechnicalSkills";
 import Testimonial from "@/Components/Testimonial";
 import BacToTopButton from "@/Components/BacToTopButton";
 import WhatsAppButton from "@/Components/WhatsAppButton";
+import ClickEffect from "@/Components/ClickEffect";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -86,6 +87,9 @@ const HomePage = () => {
 
         {/* WhatsApp Quick Contact */}
         <WhatsAppButton />
+
+        {/* Whirlwind Mouse Click Effect */}
+        <ClickEffect />
       </div>
     </>
   );

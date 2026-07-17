@@ -1,6 +1,7 @@
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { FaGithub, FaXTwitter, FaLinkedin } from "react-icons/fa6";
+import Image from "next/image";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -21,14 +22,19 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand */}
           <div className="text-center md:text-left">
-            <h2
-              className="text-[22px] font-bold cursor-pointer"
-              style={{ color: "var(--text-primary)" }}
+            <div
+              className="cursor-pointer mb-2 flex justify-center md:justify-start"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
-              GDAC<span className="text-yellow-400">TECH</span>
-            </h2>
-            <p className="text-[13px] mt-1" style={{ color: "var(--text-muted)" }}>
+              <Image
+                src="/images/logo.png"
+                alt="GDAC Tech Logo"
+                width={110}
+                height={33}
+                className="object-contain dark:invert-0 invert transition-all duration-300"
+              />
+            </div>
+            <p className="text-[13px]" style={{ color: "var(--text-muted)" }}>
               {String(t("footer.builtWith"))}
             </p>
           </div>
