@@ -11,6 +11,26 @@ export interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
+    name: 'Foyer Foka',
+    role: 'Restaurant & Bar, Douala',
+    quote: {
+      en: "The website has transformed our customer experience: more reservations, a menu that's always available, and a more professional image, exactly what we needed to help Foyer Foka gain recognition beyond Bonanjo.",
+      fr: "Le site a changé notre relation client : plus de réservations, un menu toujours accessible, et une image plus professionnelle, exactement ce qu'il fallait pour faire rayonnement le Foyer Foka au-delà de Bonanjo."
+    },
+    avatar: '/images/foyer_foka.jpg',
+    rating: 5
+  },
+  {
+    name: 'Equipe Saga-Africa',
+    role: 'Restaurant, Douala',
+    quote: {
+      en: "Professional support from start to finish, with a real eye for detail and a willingness to listen. The website perfectly reflects our brand image and has strengthened our credibility with our customers. It’s a tool I recommend to every restaurant owner.",
+      fr: "Un accompagnement professionnel du début à la fin, avec un vrai sens du détail et de l'écoute. Le site reflète parfaitement notre image et a renforcé notre crédibilité auprès de nos clients. Un outil que je recommande à tout restaurateur."
+    },
+    avatar: '/images/saga_africa.png',
+    rating: 5
+  },
+  {
     name: 'Elvis Kamgang',
     role: 'CEO - Kelvis Boulangerie',
     quote: {
